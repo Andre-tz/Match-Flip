@@ -1,9 +1,16 @@
+//App tendra la aplicacoin completa, header, footer y el home
+import Header from "./Components/Header";
+import Footer from "./Components/Footer"
+import Home from "./Components/Home"
+
 function App() {
   return (
     <>
-        <h1 className= "bg-sky-300">Hola mundo desde React + Typescript</h1>
+        <Header />
+        <Home />
+        <Footer />
     </>
   )
 }
 
-export default App
+export default App;
