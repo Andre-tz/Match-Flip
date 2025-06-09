@@ -2,9 +2,9 @@
 const Home = ( ) =>{
 
     return(
-        <main>
+        <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen">
 
-            <h1>Bienvenido a Memory Cards</h1>
+            <h1 className="text-5xl">Bienvenido a Memory Cards</h1>
 
             {/* 
                 <div>
