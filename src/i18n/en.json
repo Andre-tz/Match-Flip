@@ -1,0 +1,17 @@
+{
+    "title": "Memory Card Game",
+    "subtitle": "A fun and challenging memory card game to test your memory skills.",
+    "startGame": "Start Game",
+    "difficulty": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard",
+        "godMode": "God Mode"
+    },
+    "description":{
+        "easy": "Nice and chill. Just a few cards, no rush, no stress. Ideal if your brain's still warming up or if coffee hasn’t kicked in yet ☕😉",
+        "medium": "Alright, now we’re talking. More cards, a bit less time. Not too easy, not too hard—just the right spice. Your memory's gonna sweat a little 🔥🧠",
+        "hard": "No mercy mode. Tons of cards, ticking clock, and zero forgiveness. Perfect if you're feeling brave... or slightly chaotic today 😈⏱️",
+        "godMode": "Welcome, legend. This isn't just a game—it's war. Max cards, brutal speed, zero mercy. Even your neurons are sweating. Good luck… you’ll need it 😤⚡🧠"
+    }
+}

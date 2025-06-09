@@ -1,0 +1,17 @@
+{
+    "title": "Juego de Memoria",
+    "subtitle": "Un divertido y desafiante juego de memoria para poner a prueba tus habilidades de memoria.",
+    "startGame": "Iniciar Juego",
+    "difficulty": {
+        "easy": "Fácil",
+        "medium": "Medio",
+        "hard": "Difícil",
+        "godMode": "Modo Dios"
+    },
+    "description": {
+        "easy": "Tranquilo y relajado. Solo unas pocas cartas, sin prisa, sin estrés. Ideal si tu cerebro aún se está calentando o si el café aún no ha hecho efecto ☕😉",
+        "medium": "Bien, ahora estamos hablando. Más cartas, un poco menos de tiempo. No demasiado fácil, no demasiado difícil, justo el toque perfecto. Tu memoria va a sudar un poco 🔥🧠",
+        "hard": "Modo sin piedad. Montones de cartas, reloj en marcha y cero perdón. Perfecto si te sientes valiente... o ligeramente caótico hoy 😈⏱️",
+        "godMode": "Bienvenido, leyenda. Esto no es solo un juego—es una guerra. Máximo de cartas, velocidad brutal, cero piedad. Incluso tus neuronas están sudando. Buena suerte... la necesitarás 😤⚡🧠"
+    }
+}

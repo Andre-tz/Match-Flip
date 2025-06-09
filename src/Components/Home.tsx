@@ -1,10 +1,16 @@
 //este es el componente que tendra la lo principal de la aplicacoin, titulo, botones, etc
+
+import { useTranslation } from "react-i18next";
+import DifficultyPanel from "./DifficultyPanel";
 const Home = ( ) =>{
 
+    const { t } = useTranslation();
     return(
         <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen">
 
-            <h1 className="text-5xl">Bienvenido a Memory Cards</h1>
+            <h1 className="text-5xl">{ t( "title" ) }</h1>
+
+            <h2 className="text-2xl">{ t( "subtitle" ) }</h2>
 
             {/* 
                 <div>
@@ -14,22 +20,8 @@ const Home = ( ) =>{
                     </label>
                 </div>
             */}
+            <DifficultyPanel />
             
-            <div>
-
-                <div>
-                    <button>Fácil</button>
-                    <button >Normal</button>
-                    <button>Difícil</button>
-                    <button>Modo Dios</button>
-                </div>
-
-                <p>Aqui habrá una descripcion de cada modo.....</p>
-
-            </div>
-
-            <button>Iniciar</button>
-
         </main>
     )
 }
