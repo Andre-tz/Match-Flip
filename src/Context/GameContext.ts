@@ -8,12 +8,18 @@ type  UserType ={
     difficulty: string;
     score: number;
     language : string;
+    pairCards? : number;
+    setpairCards? : ( value: number ) => void;
 }
 
 // tipo de datos que se usarán en el context
 type GameContextType ={
     userData: UserType;
     setUserData: React.Dispatch<React.SetStateAction<UserType>>;
+    timerActive: boolean;
+    setTimerActive: React.Dispatch<React.SetStateAction<boolean>>;
+    timer: number;
+    setTimer: React.Dispatch<React.SetStateAction<number>>;
 }
 
 //aqui estoy creando el contexto el cual se exporta para que se pueda usar en otros componentes, el cual aceptara solo tipos de datos declarados en el type

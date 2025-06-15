@@ -14,8 +14,8 @@ const DifficultyPanel = () => {
     const { t } = useTranslation();
     //este estado guardara el nivel de dificultad seleccionado
     const [ selected, setSelected ] = useState<string>( "" );
-
-    const { setUserData } = useGame();
+    //usando el context
+    const { setUserData, setTimerActive, setTimer} = useGame();
 
     //este useEffect se ejecutara cada vez que el usuario cambie la dificultad, y actualizara el contexto con el nuevo valor
     useEffect( () => {
@@ -23,7 +23,8 @@ const DifficultyPanel = () => {
             //cada vez que la seleccion del usuario cambia, se modifica el valor del contexto
             setUserData ( prevData => ( {
                 ...prevData,
-                difficulty: selected
+                difficulty: selected,
+                pairCards: selected === "easy" ? 6 : selected === "medium" ? 8 : selected === "hard" ? 10 : 15 // dependiendo de la dificultad, se asigna un numero de cartas
             }))
         }
     }, [ selected, setUserData ] ); // 
@@ -32,6 +33,14 @@ const DifficultyPanel = () => {
     const handleClick = ( level : string)=>{
         setSelected( level );
     }
+
+    //este useEffect se ejecuta una vez al montar el componente, y activa el contador
+    //y reinicia el contador a 5 segundos
+    useEffect( () =>{
+        setTimerActive( true ); //activamos el contador
+        setTimer( 5 ); // reiniciamos el contador
+    }, [ setTimerActive, setTimer ] ); // se ejecuta una vez al montar el componente
+
     return (
         <>
             <div>
