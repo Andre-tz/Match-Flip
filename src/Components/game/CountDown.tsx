@@ -1,9 +1,12 @@
 //este componente me dará una cuenta regresiva para iniciar el juego
 import { useEffect } from "react";
 import useGame from "../../hook/useGame";
+import { useTranslation } from "react-i18next";
 const CountDown = () =>{
     //usare el contexto para activar el contador
     const { setTimerActive, setTimer, timer } = useGame();
+    //el traductor de texto
+    const { t } = useTranslation( );
 
     //este useEffect se disparará cuando se monte el componente 
     useEffect( () =>{
@@ -28,7 +31,7 @@ const CountDown = () =>{
     }, [ timer, setTimerActive])
     return (
         <>
-            <h1>El juego iniciará en:</h1>
+            <h1>{  t( "gameStartIn" ) }</h1>
             <p>{ timer }</p>
         </>
 

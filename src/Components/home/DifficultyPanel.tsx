@@ -1,8 +1,9 @@
 //este componente es el que tendra la logica de los botones de dificultad, y la descripcion de cada uno
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import useGame from "../../hook/useGame";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 //estas constantes tendran los estilos de lo botones
 const stylesButton = "px-2 border-2 border-red-600 w-40 rounded-2xl cursor-pointer transition-colors duration-300"
@@ -16,6 +17,8 @@ const DifficultyPanel = () => {
     const [ selected, setSelected ] = useState<string>( "" );
     //usando el context
     const { setUserData, setTimerActive, setTimer} = useGame();
+    //este constante tendra el hook de navegacion
+    const navigate = useNavigate();
 
     //este useEffect se ejecutara cada vez que el usuario cambie la dificultad, y actualizara el contexto con el nuevo valor
     useEffect( () => {
@@ -34,6 +37,14 @@ const DifficultyPanel = () => {
         setSelected( level );
     }
 
+    const handleNavigate = () => {
+        if( !selected ) {
+            toast.warning( t( "levelWarning" ) ); // si no se ha seleccionado una dificultad, mostramos un mensaje de error
+            return;
+        }else{
+            navigate( "/game" )
+        }
+    }
     //este useEffect se ejecuta una vez al montar el componente, y activa el contador
     //y reinicia el contador a 5 segundos
     useEffect( () =>{
@@ -60,7 +71,7 @@ const DifficultyPanel = () => {
                 <p className="mt-4 text-gray-600 text-center">{ !selected? "escoge tu dificultad" : t(`description.${ selected }`)}</p>
             </div>
 
-            <Link to= "/game"><button className={ selected? "" : buttonDisabled }>{ t( "startGame" ) }</button></Link>
+            <button className={ selected? "" : buttonDisabled } onClick={ handleNavigate }>{ t( "startGame" ) }</button>
             
         </>
         

@@ -14,5 +14,7 @@
         "hard": "Modo sin piedad. Montones de cartas, reloj en marcha y cero perdón. Perfecto si te sientes valiente... o ligeramente caótico hoy 😈⏱️",
         "godMode": "Bienvenido, leyenda. Esto no es solo un juego—es una guerra. Máximo de cartas, velocidad brutal, cero piedad. Incluso tus neuronas están sudando. Buena suerte... la necesitarás 😤⚡🧠"
     },
-    "score": "Puntuación"
+    "score": "Puntuación",
+    "levelWarning": "Elige un nivel de dificultad para comenzar el juego.",
+    "gameStartIn": "El juego comienza en:"
 }

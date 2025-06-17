@@ -6,19 +6,18 @@ import CountDown from "./CountDown";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 
+
 //este array contiene el nombre de todas las imagenes que se usaran en el juego
 //const allImages = [ "blue-eyes", "bombardera", "cortex", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]
 
 const Game = () =>{
-
     //usamos el contexto para acceder a datos
     const { timerActive } = useGame();
-    
     //obtener el hook para manejar el click en el boton de atras
     const navigation   = useNavigate();
 
     const handleClick = () =>{
-        navigation("/") //esto nos lleva al inicio
+            navigation("/") //esto nos lleva al inicio
     }
 
     if( timerActive ) { return <CountDown /> }

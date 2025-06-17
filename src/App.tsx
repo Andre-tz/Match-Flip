@@ -2,6 +2,7 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer"
 import { Outlet } from "react-router-dom";
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
             <Outlet /> 
         </main>
         <Footer />
+        <Toaster position="top-center" />
     </>
   )
 }

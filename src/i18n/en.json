@@ -2,6 +2,7 @@
     "title": "Memory Card Game",
     "subtitle": "A fun and challenging memory card game to test your memory skills.",
     "startGame": "Start Game",
+
     "difficulty": {
         "easy": "Easy",
         "medium": "Medium",
@@ -14,5 +15,7 @@
         "hard": "No mercy mode. Tons of cards, ticking clock, and zero forgiveness. Perfect if you're feeling brave... or slightly chaotic today 😈⏱️",
         "godMode": "Welcome, legend. This isn't just a game—it's war. Max cards, brutal speed, zero mercy. Even your neurons are sweating. Good luck… you’ll need it 😤⚡🧠"
     },
-    "score": "Score"
+    "score": "Score",
+    "levelWarning" : "Choose a difficulty level to start the game.",
+    "gameStartIn": "The game starts in:"
 }
