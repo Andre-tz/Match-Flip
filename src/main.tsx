@@ -6,7 +6,7 @@ import Game from './Components/game/Game.tsx';
 import "./i18n"; // Ensure i18n is initialized before rendering
 import { BrowserRouter} from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import GameProvider from './Context/GameProvider.tsx';
+import GameProvider from './Components/game/Context/GameProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <GameProvider>
