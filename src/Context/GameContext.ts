@@ -8,8 +8,8 @@ type  UserType ={
     difficulty: string;
     score: number;
     language : string;
-    pairCards? : number;
-    setpairCards? : ( value: number ) => void;
+    pairCards : number;
+    setpairCards : ( value: number ) => void;
 }
 
 // tipo de datos que se usarán en el context
