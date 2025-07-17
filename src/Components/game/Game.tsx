@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import useGame from "../../hook/useGame";
 import CountDown from "./CountDown";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import getRandomImages from "../../herlpers/getRandomImages";
+import getRandomImages from "../../helpers/getRandomImages";
 import Cards from "./Cards";
-import preloadImages from "../../herlpers/preloadImages";
+import preloadImages from "../../helpers/preloadImages";
 import { toast } from "sonner";
 
 //este array contiene el nombre de todas las imagenes que se usaran en el juego
