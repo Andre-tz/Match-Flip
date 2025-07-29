@@ -8,13 +8,34 @@
         "hard": "Difícil",
         "godMode": "Modo Dios"
     },
+
     "description": {
         "easy": "Tranquilo y relajado. Solo unas pocas cartas, sin prisa, sin estrés. Ideal si tu cerebro aún se está calentando o si el café aún no ha hecho efecto ☕😉",
         "medium": "Bien, ahora estamos hablando. Más cartas, un poco menos de tiempo. No demasiado fácil, no demasiado difícil, justo el toque perfecto. Tu memoria va a sudar un poco 🔥🧠",
         "hard": "Modo sin piedad. Montones de cartas, reloj en marcha y cero perdón. Perfecto si te sientes valiente... o ligeramente caótico hoy 😈⏱️",
         "godMode": "Bienvenido, leyenda. Esto no es solo un juego—es una guerra. Máximo de cartas, velocidad brutal, cero piedad. Incluso tus neuronas están sudando. Buena suerte... la necesitarás 😤⚡🧠"
     },
+    
     "score": "Puntuación",
     "levelWarning": "Elige un nivel de dificultad para comenzar el juego.",
-    "gameStartIn": "El juego comienza en:"
+    "gameStartIn": "El juego comienza en:",
+
+    "modalVictory": {
+    "title": "¡Felicidades!",
+    "message": "Has completado el juego exitosamente.",
+    "godModeMessage": "¡Eres una leyenda! Has superado el God Mode y ganado tu recompensa.",
+    "button": "Volver a jugar"
+  },
+
+  "loseModal": {
+    "title": "¡Oh no!",
+    "message": "Has perdido esta vez. Pero puedes volver a intentarlo.",
+    "button": "Intentar de nuevo"
+  },
+
+  "timeOutModal": {
+    "title": "¡Tiempo agotado!",
+    "message": "No lograste emparejar todas las cartas a tiempo.",
+    "button": "Intentar otra vez"
+  }
 }

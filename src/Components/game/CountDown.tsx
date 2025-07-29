@@ -4,7 +4,7 @@ import useGame from "../../hook/useGame";
 import { useTranslation } from "react-i18next";
 const CountDown = () =>{
     //usare el contexto para activar el contador
-    const { setTimerActive, setTimer, timer } = useGame();
+    const { setTimerActive, setTimer, timer, setUserData } = useGame();
     //el traductor de texto
     const { t } = useTranslation( );
 
@@ -27,8 +27,14 @@ const CountDown = () =>{
 
     //cuando el timer llega a 0 entonces cambianos de estado al 
     useEffect( () =>{
-        if( timer === 0 ) { setTimerActive( false ); }
-    }, [ timer, setTimerActive])
+        if( timer === 0 ) { 
+            setTimerActive( false )
+            setUserData( prev =>({
+                ...prev,
+                gameStatus : "playing"
+        })) 
+        }
+    }, [ timer, setTimerActive, setUserData])
     return (
         <>
             <h1>{  t( "gameStartIn" ) }</h1>

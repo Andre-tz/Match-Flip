@@ -9,6 +9,7 @@ import Cards from "./Cards";
 import preloadImages from "../../helpers/preloadImages";
 import { toast } from "sonner";
 import useGameLogic from "../../hook/useGameLogic";
+import CounterTimer from "./CounterTime";
 
 //este array contiene el nombre de todas las imagenes que se usaran en el juego
 const allImages = [ "blue-eyes", "bombardera", "cortex", "crash", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]
@@ -46,9 +47,47 @@ const Game = () =>{
             })
     }, [ gameImages ])
 
+    //este console log esta solo de prueba
     useEffect( ()=> { console.log( selectedCards, "/n", matchedCards ) }, [ selectedCards, matchedCards])
     useEffect( ()=>{ toast.success( "Imágenes cargadas" ) }, [ loadedImages])
-    //cuando el timer esta activo se renderizara el componente CountDown
+
+    return(
+        <div>
+            <CounterTimer />
+            {
+                //cuando el timer esta activo se renderizara el componente CountDown 
+                timerActive? 
+                 <CountDown />
+                 :
+                 //si CpuntDown desaparece entonces preguntaremos si la imagenes aun no se han cargadp
+                !loadedImages? 
+                //si falta cargar me saldrá este mensaje
+                <h1> Cargando Imágenes </h1>
+                :
+                //en caso que ya esten cargadas entonces comenzará  el juego
+                <> 
+                    <IoMdArrowRoundBack onClick={ handleClick } className="absolute left-4"/>
+                    <h1>Componente del juego</h1>
+                    <div className="flex flex-wrap gap-5">
+                        { gameImages.map( ( card, index  ) => (
+                            <Cards
+                                key={ index }
+                                id= { index }
+                                image ={ card }
+                                isFlipped = { //dependiendo al valor que esta aca se verá si lo carta se volteará o no
+                                    selectedCards.some( c => c.name === card && c.index === index) ||
+                                    matchedCards.some( c => c == card )
+                                }
+                                onClick={ ( card, index ) => handleCardClick( { name: card, index: index  }) }
+                            />
+                        ))}
+                    </div>
+                </>
+            }
+
+        </div>
+    )
+    
     if( timerActive ) { return <CountDown /> }
 
     if( !loadedImages ){
@@ -67,7 +106,7 @@ const Game = () =>{
                             key={ index }
                             id= { index }
                             image ={ card }
-                            isFlipped = { 
+                            isFlipped = { //dependiendo al valor que esta aca se verá si lo carta se volteará o no
                                 selectedCards.some( c => c.name === card && c.index === index) ||
                                 matchedCards.some( c => c == card )
                             }

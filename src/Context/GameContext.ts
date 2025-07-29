@@ -2,6 +2,8 @@
 
 import { createContext } from "react";
 
+//este type tendrá los estados del usuario
+type GameStatus = "waitin" | "playing" | "won" | "lost" | "timeOut"
 //este type tendrá los datos del usuario
 type  UserType ={
     name: string;
@@ -10,6 +12,8 @@ type  UserType ={
     language : string;
     pairCards : number;
     setpairCards : ( value: number ) => void;
+    gamestatus: GameStatus;
+    setGameStatus: ( string: GameStatus )=> void ;
 }
 
 // tipo de datos que se usarán en el context

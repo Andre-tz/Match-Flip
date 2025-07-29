@@ -9,13 +9,34 @@
         "hard": "Hard",
         "godMode": "God Mode"
     },
+    
     "description":{
         "easy": "Nice and chill. Just a few cards, no rush, no stress. Ideal if your brain's still warming up or if coffee hasn’t kicked in yet ☕😉",
         "medium": "Alright, now we’re talking. More cards, a bit less time. Not too easy, not too hard—just the right spice. Your memory's gonna sweat a little 🔥🧠",
         "hard": "No mercy mode. Tons of cards, ticking clock, and zero forgiveness. Perfect if you're feeling brave... or slightly chaotic today 😈⏱️",
         "godMode": "Welcome, legend. This isn't just a game—it's war. Max cards, brutal speed, zero mercy. Even your neurons are sweating. Good luck… you’ll need it 😤⚡🧠"
     },
+
     "score": "Score",
     "levelWarning" : "Choose a difficulty level to start the game.",
-    "gameStartIn": "The game starts in:"
+    "gameStartIn": "The game starts in:",
+
+    "modalVictory": {
+    "title": "Congratulations!",
+    "message": "You have successfully completed the game.",
+    "godModeMessage": "You're a legend! You conquered God Mode and earned your reward.",
+    "button": "Play Again"
+  },
+
+  "loseModal": {
+    "title": "Oh no!",
+    "message": "You lost this time. But you can try again.",
+    "button": "Try Again"
+  },
+
+  "timeOutModal": {
+    "title": "Time's up!",
+    "message": "You didn’t match all the cards in time.",
+    "button": "Try Again"
+  }
 }
