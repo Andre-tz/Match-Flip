@@ -1,3 +1,4 @@
+//modal que se mostrará cuando el usuario pierda su timepo
 import { useTranslation } from "react-i18next";
 
 const TimeOutModal = ( ) =>{

@@ -7,8 +7,8 @@ const VictoryModal = ( ) =>{
     return (
         <div>
             <h2>{ t( "modalVictory.title" )}</h2>
-            <p>{ t( "modelVictory.message ") }</p>
-            <p> { t("victoryModal.godModMessage ") }</p>
+            <p>{ t( "modalVictory.message ") }</p>
+            <p> { t("modalVictory.godModMessage ") }</p>
             <button></button>
         </div>
     );

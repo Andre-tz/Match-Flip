@@ -1,3 +1,4 @@
+//modal que se mostrará cuando el usuario decida rendirse
 import { useTranslation } from "react-i18next";
 
 const LoseModal = ( ) =>{

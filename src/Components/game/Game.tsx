@@ -10,6 +10,7 @@ import preloadImages from "../../helpers/preloadImages";
 import { toast } from "sonner";
 import useGameLogic from "../../hook/useGameLogic";
 import CounterTimer from "./CounterTime";
+import IndexModal from "./modals/indexModal";
 
 //este array contiene el nombre de todas las imagenes que se usaran en el juego
 const allImages = [ "blue-eyes", "bombardera", "cortex", "crash", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]
@@ -48,12 +49,14 @@ const Game = () =>{
     }, [ gameImages ])
 
     //este console log esta solo de prueba
-    useEffect( ()=> { console.log( selectedCards, "/n", matchedCards ) }, [ selectedCards, matchedCards])
+    //useEffect( ()=> { console.log( selectedCards, "/n", matchedCards ) }, [ selectedCards, matchedCards])
     useEffect( ()=>{ toast.success( "Imágenes cargadas" ) }, [ loadedImages])
 
     return(
         <div>
-            <CounterTimer />
+            <CounterTimer
+                matchedCards={ matchedCards }
+                gameImages={ gameImages} />
             {
                 //cuando el timer esta activo se renderizara el componente CountDown 
                 timerActive? 
@@ -81,6 +84,12 @@ const Game = () =>{
                                 onClick={ ( card, index ) => handleCardClick( { name: card, index: index  }) }
                             />
                         ))}
+                    </div>
+
+                    <div>
+                        {
+                           ( userData.gameStatus!== "waiting" && userData.gameStatus!=="playing" ) && ( <IndexModal status ={ userData.gameStatus } />) 
+                        }
                     </div>
                 </>
             }

@@ -3,21 +3,27 @@ import VictoryModal from "./VictoryModal";
 import TimeOutModal from "./TimeOutModal";
 import ButtonNavigation from "./ButtonsNavigation";
 //tipo de los diferentes estados que recibirá como propiedad
-type UserStatus= "won" |"timeOut"
+type UserStatus= "won" |"timeOut" | "lost"
+type PropsModal = {
+    status : UserStatus;
+}
 
-const indexModal = ( status : UserStatus ) =>{
- 
+const IndexModal = ( { status } : PropsModal ) =>{
+
     return (
         <div> 
             {
                 status === "won"?
                     <VictoryModal />
                     :
+                    status === "timeOut"?
                     <TimeOutModal />
+                    :
+                    <ButtonNavigation />
             }
-            <ButtonNavigation />
+            
         </div>
     )
 }
 
-export default indexModal;
+export default IndexModal;

@@ -7,29 +7,46 @@ import getInitialTime from "../../helpers/getInitialTime";
 import changeMmSs from "../../helpers/changeMsSs";
 import startCountdown from "../../helpers/startCountdown";
 
-const CounterTimer =( ) =>{
+//recibirá props quer se usarán para manehar los modales
+type ArraysProps ={
+    matchedCards : string[];
+    gameImages : string[];
+}
+const CounterTimer =( { matchedCards, gameImages  } : ArraysProps ) =>{
     //usando el contador del context
-    const { userData } = useGame();
+    const { userData, setUserData } = useGame();
     //estado que tendra la cantidad de timepo dependiendo el modo
     const [ time, setTime ] = useState<number>( ()=> getInitialTime( userData.difficulty ) );
     //este estado guardará el estado del counter
     //const [ counter, setCounter] = useState<boolean>( false )
 
-    // useEffect para actualizar el valor sel timepo a cada momento;
+    // useEffect para cambiar el estado cuando el matched y el gameImages sean iguales
     useEffect( () =>{
+        if( matchedCards.length === gameImages.length / 2 ){
+            //si son iguales entonces el estado del juego para a "won"
+            setUserData( prev => ({ ...prev, gameStatus : "won" }))
+        }
+    }, [ time, gameImages, matchedCards, setUserData ] )
 
-        if( userData.gameStatus !== "playing" ) return;
-        //usando el helper para dar cuenta atras
-        const interval = startCountdown( setTime );
-
-    return ()=>{ clearInterval( interval) };
-
-    }, [ userData.gameStatus ] )
+    //este useEffect se ejecuta cuando el timeo llega a 0
+    useEffect( ()=>{ 
+        if( time === 0 ){
+            setUserData( prev => ({ ...prev, gameStatus : "timeOut" }))
+        }
+    }, [ time, setUserData])
     
+    //este useEffect se encarga de renderizar el contador  el cual se saldrá si el gameStatus es diferente
+    useEffect( ()=>{ 
+        if( userData.gameStatus !== "playing" ) return;
+        //usando el helper para dar cuenta atras++
+        const interval = startCountdown( setTime );
+        return ()=>{ clearInterval( interval) };
+    }, [ userData.gameStatus ] )
+
     //esta funcion cambia el formato del timepo
     const [ minute, seconds ] = changeMmSs( time )
 
-    useEffect( ()=>{ console.log( time ) }, [ time ])
+    useEffect( ()=>{ console.log( matchedCards, gameImages, userData.gameStatus ) }, [ matchedCards, gameImages, userData.gameStatus ])
 
     return (
         <div>
