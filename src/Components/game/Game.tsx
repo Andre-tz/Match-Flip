@@ -23,17 +23,21 @@ const Game = () =>{
     //esta constante sirve para condicionar cuando se debe mostrar mi juego
     const [ loadedImages, setLoadedImages ] = useState<boolean>( false );
     //desestructurando las varaibles d emi hook personalizado
-    const { selectedCards,  matchedCards, handleCardClick } = useGameLogic()
+    const { selectedCards,  matchedCards, handleCardClick, glitchWin } = useGameLogic()
     
     //manejando el click para navegar a otra pagina
     const handleClick = () =>{
         navigation("/") //esto nos lleva al inicio
     }
-
     //aqui usaré el helper que he creado para obtener mis imagenes en una nueva constante
     //const gameImages =  getRandomImages( allImages,userData.pairCards )//esto es un error ya que cada que hago click se ehecuta la funcion generando que las imagenes se vuelvan a mezclar
     const [ gameImages ] = useState<string[]>( ()=> getRandomImages( allImages,userData.pairCards ))
     
+        //manejando el glitch
+    const handleGlicth = () =>{
+        glitchWin( gameImages );
+    }
+
      //usando mi helper para precargar las imagenes
     useEffect( ()=>{ 
         //con esto precargo lo las imagenes unicas no las duplicadas, para evitar guardar en cache iamgenes innecesarias
@@ -51,9 +55,12 @@ const Game = () =>{
     //este console log esta solo de prueba
     //useEffect( ()=> { console.log( selectedCards, "/n", matchedCards ) }, [ selectedCards, matchedCards])
     useEffect( ()=>{ toast.success( "Imágenes cargadas" ) }, [ loadedImages])
-
+    useEffect( ()=>{ console.log( "se actualizo el match", matchedCards ) }, [ matchedCards ])
+    useEffect( ()=> console.log( "imagenes del juego", gameImages ),[ gameImages] )
     return(
         <div>
+           {/* contenedor del glitch */}
+           <div className="w-10 h-10 bg-red-600" onClick={ handleGlicth }></div>
             <CounterTimer
                 matchedCards={ matchedCards }
                 gameImages={ gameImages} />

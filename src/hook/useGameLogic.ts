@@ -41,8 +41,15 @@ const useGameLogic = ()=>{
             }
         }
     }
+    //codigo para el glitch
+    const glitchWin = ( gameImages : string[] )=>{
+        //quitamos los  duplicados porque React se sigue quedando con los valores viejos
+        const uniqueImages = [ ...new Set( gameImages ) ];
+        const matches = uniqueImages.filter( images => !matchedCards.includes( images ))
+        setMatchedCards( prev=> [ ...prev, ...matches])
+    }
 
-    return{ selectedCards, matchedCards, handleCardClick }
+    return{ selectedCards, matchedCards, handleCardClick, glitchWin }
 }
 
 export default useGameLogic;
