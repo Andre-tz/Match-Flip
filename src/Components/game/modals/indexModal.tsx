@@ -22,6 +22,7 @@ const IndexModal = ( { status } : PropsModal ) =>{
                     <ButtonNavigation />
             }
             
+            <ButtonNavigation/>
         </div>
     )
 }

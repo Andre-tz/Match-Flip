@@ -13,7 +13,6 @@ const VictoryModal = ( ) =>{
             {
                 userData.difficulty==="godMode" && (  <p> { t("modalVictory.godModeMessage") }</p> )
             }
-            <button></button>
         </div>
     );
 }

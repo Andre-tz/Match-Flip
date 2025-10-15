@@ -47,7 +47,6 @@ const CounterTimer =( { matchedCards, gameImages  } : ArraysProps ) =>{
     //esta funcion cambia el formato del timepo
     const [ minute, seconds ] = changeMmSs( time )
 
-    useEffect( ()=>{ console.log( matchedCards, gameImages, userData.gameStatus ) }, [ matchedCards, gameImages, userData.gameStatus ])
     return (
         <div>
             <FcAlarmClock />

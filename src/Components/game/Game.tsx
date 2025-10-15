@@ -51,12 +51,8 @@ const Game = () =>{
                 toast.error( "Ocurrió un problema al cargar imágenes" )
             })
     }, [ gameImages ])
-
-    //este console log esta solo de prueba
-    //useEffect( ()=> { console.log( selectedCards, "/n", matchedCards ) }, [ selectedCards, matchedCards])
-    useEffect( ()=>{ toast.success( "Imágenes cargadas" ) }, [ loadedImages])
-    useEffect( ()=>{ console.log( "se actualizo el match", matchedCards ) }, [ matchedCards ])
-    useEffect( ()=> console.log( "imagenes del juego", gameImages ),[ gameImages] )
+    
+    useEffect( ()=>{ console.log( timerActive )  }, [ timerActive ])
     return(
         <div>
            {/* contenedor del glitch */}
