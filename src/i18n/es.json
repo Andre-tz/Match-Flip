@@ -37,10 +37,16 @@
         "message": "Tu mente fue aguda, pero no lo bastante rápida esta vez. Recupera el enfoque y vuelve a intentarlo."
     },
 
-"buttonModals": {
-    "tryAgain": "Intentar de nuevo",
-    "giveUp": "Rendirse",
-    "exit": "Salir"
-}
+    "buttonModals": {
+        "tryAgain": "Intentar de nuevo",
+        "giveUp": "Rendirse",
+        "exit": "Salir"
+    },
+
+     "footer": {
+        "textOne": "¿Crees que tienes lo que se necesita para superar GodMode? 🧠🎮🔥",
+        "textTwo": "Creado con código, pasión y demasiado café por Andre © 2025"
+
+    }
 
 }

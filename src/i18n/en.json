@@ -41,6 +41,11 @@
         "tryAgain": "Intentar de nuevo",
         "giveUp": "Rendirse",
         "exit": "Salir"
+    },
+
+    "footer": {
+        "textOne": "Think you’ve got what it takes to beat GodMode? 🧠🎮🔥",
+        "textTwo": "Crafted with code, passion, and too much coffee by Andre © 2025"
     }
 
 }

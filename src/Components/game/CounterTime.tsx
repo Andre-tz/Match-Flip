@@ -11,14 +11,13 @@ import startCountdown from "../../helpers/startCountdown";
 type ArraysProps ={
     matchedCards : string[];
     gameImages : string[];
+    resetTime: number;
 }
-const CounterTimer =( { matchedCards, gameImages  } : ArraysProps ) =>{
+const CounterTimer =( { matchedCards, gameImages, resetTime  } : ArraysProps ) =>{
     //usando el contador del context
     const { userData, setUserData } = useGame();
     //estado que tendra la cantidad de timepo dependiendo el modo
     const [ time, setTime ] = useState<number>( ()=> getInitialTime( userData.difficulty ) );
-    //este estado guardará el estado del counter
-    //const [ counter, setCounter] = useState<boolean>( false )
 
     // useEffect para cambiar el estado cuando el matched y el gameImages sean iguales
     useEffect( () =>{
@@ -43,6 +42,7 @@ const CounterTimer =( { matchedCards, gameImages  } : ArraysProps ) =>{
         return ()=>{ clearInterval( interval) };
     }, [ userData.gameStatus ] )
 
+    useEffect( ()=>{ setTime( getInitialTime( userData.difficulty ) ) }, [ resetTime, userData.difficulty ] )
     //esta funcion cambia el formato del timepo
     const [ minute, seconds ] = changeMmSs( time )
 

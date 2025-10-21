@@ -26,6 +26,8 @@ const Game = () =>{
     const { selectedCards,  matchedCards, handleCardClick, glitchWin, resetGame } = useGameLogic()
     //aqui usaré el helper que he creado para obtener mis imagenes en una nueva constante
     const [ gameImages, setGameImages ] = useState<string[]>( ()=> getRandomImages( allImages,userData.pairCards ))
+    //estado que se usará para reiniciar el contador del tiempo
+    const [ resetTime, setResetTime ]  = useState( 0 );
     
     //manejando el click para navegar a otra pagina
     const handleClick = () =>{
@@ -43,6 +45,7 @@ const Game = () =>{
         setGameImages( getRandomImages( allImages,userData.pairCards ) ) //cambia las cartas
         setTimer( 5 );//lreinicia el contador
         setTimerActive( true );//activa el contador
+        setResetTime( prev => prev + 1 ) 
     }
     
      //usando mi helper para precargar las imagenes
@@ -66,7 +69,8 @@ const Game = () =>{
            <div className="w-10 h-10 bg-red-600" onClick={ handleGlicth }></div>
             <CounterTimer
                 matchedCards={ matchedCards }
-                gameImages={ gameImages} />
+                gameImages={ gameImages}
+                resetTime={ resetTime } />
             {
                 //cuando el timer esta activo se renderizara el componente CountDown 
                 timerActive? 

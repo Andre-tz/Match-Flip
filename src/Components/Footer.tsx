@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 //este es el footer
 const Footer = ( ) =>{
-
+    //usamos useTranslation
+    const { t } = useTranslation();
     return (
         <footer>
 
-            <p>¿Listo para entrenar tu memoria? 🧠 ¿Te crees capaz de superar el GodMode? 🎮🔥</p>
-            <p>Creado con pasión, código y unas cuantas tazas de café por Andre © 2025</p>
+            <p>{ t( "footer.textOne" ) }</p>
+            <p>{ t( "footer.textTwo" ) }</p>
 
         </footer>
     )
