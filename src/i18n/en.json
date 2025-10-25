@@ -1,6 +1,5 @@
 {
-    "title": "Memory Card Game",
-    "subtitle": "A fun and challenging memory card game to test your memory skills.",
+    "subtitle": "Flip, match, and test your speed to find all the pairs.",
     "startGame": "Start Game",
 
     "difficulty": {
@@ -12,30 +11,41 @@
     
     "description":{
         "easy": "Nice and chill. Just a few cards, no rush, no stress. Ideal if your brain's still warming up or if coffee hasn’t kicked in yet ☕😉",
-        "medium": "Alright, now we’re talking. More cards, a bit less time. Not too easy, not too hard—just the right spice. Your memory's gonna sweat a little 🔥🧠",
+        "medium": "Alright, now we’re talking. More cards, a bit less time. Not too easy, not too hard—just the right spice. Your focus’s gonna sweat a little 🔥🧠",
         "hard": "No mercy mode. Tons of cards, ticking clock, and zero forgiveness. Perfect if you're feeling brave... or slightly chaotic today 😈⏱️",
         "godMode": "Welcome, legend. This isn't just a game—it's war. Max cards, brutal speed, zero mercy. Even your neurons are sweating. Good luck… you’ll need it 😤⚡🧠"
     },
 
-    "score": "Score",
+    "nameModal": {
+        "title": "Hey there! 👋",
+        "message": "Before we start, tell me your name so I can cheer you on during the game.",
+        "placeholder": "Enter your name...",
+        "button": "Start"
+    },
+
+    "infoModal": {
+        "title": "How to Play 🎮",
+        "message": "One rule: flip, match, and don’t let the timer beat you. Each level gets harder — ready to prove your reflexes?"
+  },
+
     "levelWarning" : "Choose a difficulty level to start the game.",
     "gameStartIn": "The game starts in:",
 
     "modalVictory": {
-        "title": "Victory Achieved",
-        "message": "You faced the challenge and emerged victorious. Well played!",
-        "godModeMessage": "You shattered limits and conquered the impossible — God Mode bows to you."
-},
+        "title": "You won!",
+        "message": "You took on the challenge and made it. Nice job!",
+        "godModeMessage": "That was insane. You beat God Mode and proved nothing’s impossible."
+  },
 
   "loseModal": {
-    "title": "You Gave Up...",
-    "message": "Abandoning the fight doesn’t end the game — it delays your glory. Rise again when you're ready."
-},
+        "title": "You gave up...",
+        "message": "Sometimes you just need a break. Come back when you’re ready to try again."
+  },
 
-    "timeOutModal": {
-        "title": "Time Slipped Away...",
-        "message": "Your mind was sharp, but not fast enough this time. Reset your focus and strike again."
-    },
+  "timeOutModal": {
+        "title": "Time’s up...",
+        "message": "You were close, just needed a bit more speed. Focus and give it another shot."
+  },
 
     "buttonModals": {
         "tryAgain": "Intentar de nuevo",
@@ -44,8 +54,8 @@
     },
 
     "footer": {
-        "textOne": "Think you’ve got what it takes to beat GodMode? 🧠🎮🔥",
-        "textTwo": "Crafted with code, passion, and too much coffee by Andre © 2025"
-    }
+        "textOne": "Think you can handle GodMode? 🧠🎮🔥",
+        "textTwo": "Built with code, passion, and way too much coffee by Andre © 2025"
+  }
 
 }

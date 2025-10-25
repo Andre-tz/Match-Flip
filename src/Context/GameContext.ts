@@ -8,7 +8,6 @@ type GameStatus = "waiting" | "countDown" | "playing" | "won" | "lost" | "timeOu
 type  UserType ={
     name: string;
     difficulty: string;
-    score: number;
     language : string;
     pairCards : number;
     setpairCards : ( value: number ) => void;

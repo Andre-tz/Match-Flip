@@ -1,6 +1,5 @@
 {
-    "title": "Juego de Memoria",
-    "subtitle": "Un divertido y desafiante juego de memoria para poner a prueba tus habilidades de memoria.",
+    "subtitle": "Voltea, combina y reta tu velocidad para encontrar todas las parejas.",
     "startGame": "Iniciar Juego",
     "difficulty": {
         "easy": "Fácil",
@@ -10,32 +9,42 @@
     },
 
     "description": {
-        "easy": "Tranquilo y relajado. Solo unas pocas cartas, sin prisa, sin estrés. Ideal si tu cerebro aún se está calentando o si el café aún no ha hecho efecto ☕😉",
-        "medium": "Bien, ahora estamos hablando. Más cartas, un poco menos de tiempo. No demasiado fácil, no demasiado difícil, justo el toque perfecto. Tu memoria va a sudar un poco 🔥🧠",
-        "hard": "Modo sin piedad. Montones de cartas, reloj en marcha y cero perdón. Perfecto si te sientes valiente... o ligeramente caótico hoy 😈⏱️",
-        "godMode": "Bienvenido, leyenda. Esto no es solo un juego—es una guerra. Máximo de cartas, velocidad brutal, cero piedad. Incluso tus neuronas están sudando. Buena suerte... la necesitarás 😤⚡🧠"
+        "easy": "Un modo tranquilo para empezar. Pocas cartas, sin presión, ideal para calentar o relajarte un rato ☕😉",
+        "medium": "Un punto medio. Más cartas, menos tiempo, el equilibrio justo entre relajado y desafiante 🔥🧠",
+        "hard": "Modo difícil. Muchas cartas, el reloj corre y cada segundo cuenta. Perfecto si buscas un reto real 😈⏱️",
+        "godMode": "Solo para los más rápidos. Máximo número de cartas, poco tiempo y cero margen de error. Buena suerte 😤⚡🧠"
+  },
+
+  "nameModal": {
+        "title": "¡Hey! 👋",
+        "message": "Antes de empezar, dime tu nombre para que podamos animarte durante la partida.",
+        "placeholder": "Escribe tu nombre...",
+        "button": "Comenzar"
+    },
+
+    "infoModal": {
+        "title": "Cómo jugar 🎮",
+        "message": "Solo hay una regla: voltea, combina y no dejes que el tiempo te gane. Cada nivel sube la dificultad, ¿listo para demostrar tu reflejo?"
     },
     
-    "score": "Puntuación",
     "levelWarning": "Elige un nivel de dificultad para comenzar el juego.",
     "gameStartIn": "El juego comienza en:",
 
     "modalVictory": {
-        "title": "¡Victoria lograda!",
-        "message": "Enfrentaste el desafío y saliste victorioso. ¡Bien jugado!",
-        "godModeMessage": "Rompiste los límites y conquistaste lo imposible — el Modo Dios se inclina ante ti."
-}
-,
+        "title": "¡Ganaste!",
+        "message": "Superaste el reto y lo lograste. ¡Buen trabajo!",
+        "godModeMessage": "Impresionante. Venciste el Modo Dios y demostraste que todo es posible."
+    },
 
-    "loseModal": {
+  "loseModal": {
         "title": "Te rendiste...",
-        "message": "Abandonar la batalla no acaba el juego — solo retrasa tu gloria. Levántate cuando estés listo."
-    },
+        "message": "A veces hay que tomar un descanso. Cuando estés listo, vuelve a intentarlo."
+  },
 
-    "timeOutModal": {
-        "title": "El tiempo se esfumó...",
-        "message": "Tu mente fue aguda, pero no lo bastante rápida esta vez. Recupera el enfoque y vuelve a intentarlo."
-    },
+  "timeOutModal": {
+        "title": "Se acabó el tiempo...",
+        "message": "Estuviste cerca, pero faltó un poco más de rapidez. Concéntrate y prueba otra vez."
+  },
 
     "buttonModals": {
         "tryAgain": "Intentar de nuevo",
@@ -44,9 +53,8 @@
     },
 
      "footer": {
-        "textOne": "¿Crees que tienes lo que se necesita para superar GodMode? 🧠🎮🔥",
-        "textTwo": "Creado con código, pasión y demasiado café por Andre © 2025"
-
-    }
+        "textOne": "¿Crees poder con el Modo Dios? 🧠🎮🔥",
+        "textTwo": "Hecho con código, pasión y demasiado café por Andre © 2025"
+  }
 
 }

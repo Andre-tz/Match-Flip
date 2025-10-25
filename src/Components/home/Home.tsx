@@ -18,7 +18,7 @@ const Home = ( ) =>{
 
     return(
         <>
-            <h1 className="text-5xl">{ t( "title" ) }</h1>
+            <h1 className="text-5xl">MatchFlip</h1>
             <h2 className="text-2xl">{ t( "subtitle" ) }</h2>
             <DifficultyPanel />  
         </>

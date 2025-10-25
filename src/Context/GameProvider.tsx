@@ -11,7 +11,7 @@ const GameProvider = ({ children } : Props)=>{
     const [ userData, setUserData ] = useState(
         () =>{
             const storedData = localStorage.getItem( "userData" );
-            return storedData? JSON.parse( storedData ) : { name: "", difficulty: "", score: 0, language: "es", pairCards : 0, gameStatus : "waiting"  }
+            return storedData? JSON.parse( storedData ) : { name: "", difficulty: "", language: "es", pairCards : 0, gameStatus : "waiting"  }
         }
     );
     

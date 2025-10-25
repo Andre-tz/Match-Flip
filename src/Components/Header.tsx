@@ -6,7 +6,7 @@ import useGame from "../hook/useGame";
 
 const Header = ( )  =>{
     //este hookk se usara para las traduciones del texto de la aplicacion
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const { setUserData } = useGame();
 
     const handleLanguage = () =>{
@@ -22,7 +22,6 @@ const Header = ( )  =>{
     return (
         <header className="w-full h-10 px-4 flex justify-between items-center text-xl md:text-2xl transition ease-in-out duration-500 bg-blue-700 md:bg-blue-950" >
             <h1 className="flex">{"<"}<AiFillThunderbolt />{">"} ItsAndreDev</h1>
-            <p>{ t( "score" ) }: 0000</p>
             <IoLanguageSharp  onClick={ handleLanguage }/>
         </header>
     )
