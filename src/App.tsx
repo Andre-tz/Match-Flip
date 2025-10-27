@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         <Header />
-        <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen">
+        <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen relative z-0">
             <Outlet /> 
         </main>
         <Footer />
