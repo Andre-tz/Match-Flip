@@ -24,7 +24,8 @@
 
     "infoModal": {
         "title": "Cómo jugar 🎮",
-        "message": "Solo hay una regla: voltea, combina y no dejes que el tiempo te gane. Cada nivel sube la dificultad, ¿listo para demostrar tu reflejo?"
+        "message": "Solo hay una regla: voltea, combina y no dejes que el tiempo te gane. Tú eliges la dificultad, así que demuestra de qué estás hecho.",
+        "button": "¡Listo! Empecemos 💪"
     },
     
     "levelWarning": "Elige un nivel de dificultad para comenzar el juego.",

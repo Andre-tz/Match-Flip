@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next"
 import useGame from "../../hook/useGame";
 
@@ -20,7 +20,6 @@ const NameModal = ( )=>{
         setUserData( prev => ( { ...prev, name: inputValue } ) )
     }
 
-    useEffect( ()=> { console.log(inputValue ) } , [ inputValue])
     return (
         <div className="absolute z-10 bg-green-600">
             <h1>{ t( "nameModal.title" ) }</h1>

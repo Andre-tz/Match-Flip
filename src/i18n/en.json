@@ -25,7 +25,8 @@
 
     "infoModal": {
         "title": "How to Play 🎮",
-        "message": "One rule: flip, match, and don’t let the timer beat you. Each level gets harder — ready to prove your reflexes?"
+        "message": "There’s only one rule: flip, match, and don’t let the clock beat you. You choose the difficulty, so show what you’re made of.",
+        "button": "Got it! Let's start 💪"
   },
 
     "levelWarning" : "Choose a difficulty level to start the game.",
