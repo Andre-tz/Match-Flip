@@ -5,12 +5,15 @@ import DifficultyPanel from "./DifficultyPanel";
 import { useEffect, useState } from "react";
 import useGame from "../../hook/useGame";
 import NameModal from "./NameModal";
+import InfoModal from "./InfoModal";
 const Home = ( ) =>{
 
     const { t } = useTranslation();
     const { setUserData, userData } = useGame();
     //state que sirve para mostrar el modal del nombre
     const [ modalActive, setModalActive ] = useState<boolean>( false );
+    //obtenemos shoeInfo desde el context
+    const { showInfo } = useGame();
     
     //este useEffect servira para cambiar el estado del juego 
     useEffect ( ()=>{
@@ -27,13 +30,14 @@ const Home = ( ) =>{
             setModalActive( false );
         }
     }, [ userData ])
-
+    useEffect( ( )=>{ console.log( showInfo) } , [ showInfo])
     return(
         <>
             { modalActive && <NameModal />}
             <h1 className="text-5xl">MatchFlip</h1>
             <h2 className="text-2xl">{ t( "subtitle" ) }</h2>
             <DifficultyPanel />  
+            { showInfo && <InfoModal />}
         </>
     )
 }

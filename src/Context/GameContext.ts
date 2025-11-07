@@ -23,6 +23,10 @@ type GameContextType ={
     setTimerActive: React.Dispatch<React.SetStateAction<boolean>>;
     timer: number;
     setTimer: React.Dispatch<React.SetStateAction<number>>;
+    showInfo: boolean;
+    setShowInfo:  ( showInfo : boolean ) => void;
+    wasShown: boolean;
+    setWasShown: ( wasShown : boolean ) => void;
 }
 
 //aqui estoy creando el contexto el cual se exporta para que se pueda usar en otros componentes, el cual aceptara solo tipos de datos declarados en el type
