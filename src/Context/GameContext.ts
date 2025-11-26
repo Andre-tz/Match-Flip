@@ -12,7 +12,7 @@ type  UserType ={
     pairCards : number;
     setpairCards : ( value: number ) => void;
     gameStatus: GameStatus;
-    setGameStatus: ( string: GameStatus )=> void ;
+    codeTheme: boolean;
 }
 
 // tipo de datos que se usarán en el context

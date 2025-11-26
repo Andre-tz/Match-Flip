@@ -12,11 +12,13 @@ import useGameLogic from "../../hook/useGameLogic";
 import CounterTimer from "./CounterTime";
 import IndexModal from "./modals/IndexModal";
 
-//este array contiene el nombre de todas las imagenes que se usaran en el juego
-const allImages = [ "blue-eyes", "bombardera", "cortex", "crash", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]
+ //esto sarrays contienen el nombre de todas las imagenes que se usaran en el juego
+ const characters = [ "blue-eyes", "bombardera", "cortex", "crash", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]
+
+const languages = [ "php", "js", "html", "css", "react", "jest", "git", "python", "typescript",     "ruby", "docker", "java", "nodejs", "c++", "go", "kotlin" ];
 
 const Game = () =>{
-    //usamos el contexto para acceder a datos
+     //usamos el contexto para acceder a datos
     const { timerActive, setTimerActive, setTimer,  userData } = useGame();
     //obtener el hook para manejar el click en el boton de atras
     const navigation   = useNavigate();
@@ -24,8 +26,16 @@ const Game = () =>{
     const [ loadedImages, setLoadedImages ] = useState<boolean>( false );
     //desestructurando las varaibles d emi hook personalizado
     const { selectedCards,  matchedCards, handleCardClick, glitchWin, resetGame } = useGameLogic()
+
     //aqui usaré el helper que he creado para obtener mis imagenes en una nueva constante
-    const [ gameImages, setGameImages ] = useState<string[]>( ()=> getRandomImages( allImages,userData.pairCards ))
+    const [ gameImages, setGameImages ] = useState<string[]>( [] )
+    //este array obtendrá el tipo de imagenes que se requiere
+    const allImages =userData.codeTheme? languages : characters
+    //este useEffect cambiara el valor de mi gameImages
+    useEffect( ()=>{
+        setGameImages( getRandomImages( allImages, userData.pairCards ) )
+    }, [ userData.codeTheme, userData.pairCards, allImages ])
+
     //estado que se usará para reiniciar el contador del tiempo
     const [ resetTime, setResetTime ]  = useState( 0 );
     
@@ -52,7 +62,8 @@ const Game = () =>{
     useEffect( ()=>{ 
         //con esto precargo lo las imagenes unicas no las duplicadas, para evitar guardar en cache iamgenes innecesarias
         const uniqueGameImage = [ ...new Set( gameImages ) ];
-        preloadImages( uniqueGameImage )
+        const folder = userData.codeTheme? "languages" : "characters"
+        preloadImages( uniqueGameImage, folder )
             .then( ()=>{
                 setLoadedImages( true )
             })
@@ -60,7 +71,7 @@ const Game = () =>{
                 console.error( error  )
                 toast.error( "Ocurrió un problema al cargar imágenes" )
             })
-    }, [ gameImages ])
+    }, [ gameImages, userData.codeTheme ])
 
     useEffect( ()=>{ console.log( userData. gameStatus, selectedCards ) }, [ userData, selectedCards ])
     return(

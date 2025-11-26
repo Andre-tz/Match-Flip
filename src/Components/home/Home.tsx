@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import useGame from "../../hook/useGame";
 import NameModal from "./NameModal";
 import InfoModal from "./InfoModal";
+import ThemeSwitcher from "./ThemeSwitcher";
 const Home = ( ) =>{
 
     const { t } = useTranslation();
@@ -33,6 +34,7 @@ const Home = ( ) =>{
     useEffect( ( )=>{ console.log( showInfo) } , [ showInfo])
     return(
         <>
+            <ThemeSwitcher />
             { modalActive && <NameModal />}
             <h1 className="text-5xl">MatchFlip</h1>
             <h2 className="text-2xl">{ t( "subtitle" ) }</h2>

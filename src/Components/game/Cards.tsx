@@ -1,4 +1,5 @@
 //este es el componente de las cartas
+import useGame from "../../hook/useGame";
 import "../../index.css"
 //creamos el tipo del cual nuesta carta tomará valores
 type CardsProps = {
@@ -13,6 +14,8 @@ const cardsStyles = "w-full h-full backface-hidden"
 const imgStyles = "max-w-[80] max-h-[80%]"
 
 const Cards = ( {id,  image, isFlipped, onClick } : CardsProps )=>{
+    const { userData } = useGame( );
+    const route = userData.codeTheme? "languages" : "characters"
 
     return(
         <div className="perspective-[1000px]" onClick={ () => onClick( image, id ) } >
@@ -21,7 +24,7 @@ const Cards = ( {id,  image, isFlipped, onClick } : CardsProps )=>{
                     <h1 className="text-2xl">¿?</h1>
                 </div>
                 <div className={ `${ cardsStyles } absolute top-0 left-0 rotate-y-180 flex justify-center items-center`}>
-                    <img className={ `${ imgStyles} object-contain` } src={ `./src/images/${ image }.webp`} alt={ `foto de ${ image }` }/>
+                    <img className={ `${ imgStyles} object-contain` } src={ `./src/images/${ route }/${ image }.webp`} alt={ `foto de ${ image }` }/>
                 </div>
             </div>
         </div>
