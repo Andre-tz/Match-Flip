@@ -20,7 +20,7 @@ function App() {
    }, [ userData.codeTheme])
 
   return (
-    <div className={ `${ font } w-[100vw] h-[100vh]`}>
+    <div className={ `${ font } ${ userData.codeTheme ? "theme-code" : "theme-normal"} min-h-screen bg-[var(--bg)] text-[var(--text)] flex flex-col items-center px-4 py-6 transition-colors duration-300`}>
         <Header />
         <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen relative z-0">
             <Outlet /> 
