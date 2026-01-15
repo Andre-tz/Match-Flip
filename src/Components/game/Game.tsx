@@ -10,7 +10,7 @@ import preloadImages from "../../helpers/preloadImages";
 import { toast } from "sonner";
 import useGameLogic from "../../hook/useGameLogic";
 import CounterTimer from "./CounterTime";
-import IndexModal from "./modals/indexModal";
+import IndexModal from "./modals/IndexModal";
 
  //esto sarrays contienen el nombre de todas las imagenes que se usaran en el juego
  const characters = [ "blue-eyes", "bombardera", "cortex", "crash", "dark-magician", "deimos", "goku", "kratos", "luigi", "mario", "palito-pez", "red-eyes", "vegeta", "yoshi", "zeus"]

@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import useGame from "../../hook/useGame";
 import { useTranslation } from "react-i18next";
 import startCountdown from "../../helpers/startCountdown";
+import countdownMp3 from "../../assets/sounds/count-down.mp3"
+import playSound from "../../helpers/playSound";
+
 const CountDown = () =>{
     //usare el contexto para activar el contador
     const { setTimerActive, setTimer, timer, setUserData,timerActive } = useGame();
@@ -26,6 +29,8 @@ const CountDown = () =>{
                 ...prev,
                 gameStatus : "playing"
         })) 
+        }else if( timer == 3 ){
+            playSound( countdownMp3 )
         }
     }, [ timer, setTimerActive, setUserData])
     

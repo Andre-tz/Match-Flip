@@ -1,4 +1,7 @@
 import { useState } from "react";
+import matchMp3 from "../assets/sounds/match.mp3"
+import noMatchMp3 from "../assets/sounds/no-match.mp3"
+import playSound from "../helpers/playSound";
 
 type Card ={
     name: string;
@@ -29,12 +32,16 @@ const useGameLogic = ()=>{
             if( firstCard.name === secondCard.name ){
                 //si ambos son iguales, hay un match
                 setMatchedCards( prev => [ ...prev, firstCard.name ] )
+                //reproducimos sonido de match
+                playSound( matchMp3 )
                 //ahora limpiamos el array
                 setTimeout( ()=>{
                     setSelectedCards( [] )
                 }, 500 )
             }else{
                 //si son diferentes se voltean y limpiamos el array 
+                //sonido de no match
+                playSound( noMatchMp3 )
                 setTimeout(() => {
                     setSelectedCards( [] );
                 }, 1000);
