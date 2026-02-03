@@ -41,12 +41,13 @@ const CounterTimer =( { matchedCards, gameImages, resetTime  } : ArraysProps ) =
 
     //este useEffect se ejecuta cuando el timeo llega a 0
     useEffect( ()=>{ 
+        if( userData.gameStatus !== "playing" ) return;
         if( time === midTime ){ toast( midTimeMessage )}
         if( time === 10 ) { toast( lowTimeMessage )}
         if( time === 0 ){
             setUserData( prev => ({ ...prev, gameStatus : "timeOut" }))
         }
-    }, [ time, setUserData, midTimeMessage, lowTimeMessage, midTime ])
+    }, [ time, setUserData, midTimeMessage, lowTimeMessage, midTime, userData ])
     
     //este useEffect se encarga de renderizar el contador  el cual se saldrá si el gameStatus es diferente
     useEffect( ()=>{ 
