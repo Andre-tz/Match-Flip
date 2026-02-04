@@ -20,9 +20,9 @@ function App() {
    }, [ userData.codeTheme])
 
   return (
-    <div className={ `${ font } ${ userData.codeTheme ? "theme-code" : "theme-normal"} min-h-screen bg-[var(--bg)] text-[var(--text)] flex flex-col items-center px-4 py-6 transition-colors duration-300`}>
+    <div className={ `${ font } ${ userData.codeTheme ? "theme-code" : "theme-normal"} max-h-screen box-border bg-[var(--bg)] text-[var(--text)] flex flex-col items-center px-4 py-6 transition-colors duration-300`}>
         <Header />
-        <main className="bg-white-0 p-4 flex flex-col items-center justify-center min-h-screen relative z-0">
+        <main className="p-4 flex flex-col items-center justify-center relative z-0">
             <Outlet /> 
         </main>
         <Footer />

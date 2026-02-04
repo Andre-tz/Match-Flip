@@ -56,7 +56,7 @@ const DifficultyPanel = () => {
 
     return (
         <>
-            <div className="w-full flex flex-col items-center gap-4">
+            <div className="w-full flex flex-col items-center gap-2">
                 <div className="flex flex-col gap-3 w-full">
                     { buttonsLevels.map(( level, index ) => {
                         return(
@@ -70,10 +70,10 @@ const DifficultyPanel = () => {
                     })}
                 </div>
 
-                <p className="text-sm text-[var(--muted)] text-center min-h-[2.5rem]">{ !selected? "escoge tu dificultad" : t(`description.${ selected }`)}</p>
+                <p className=" px-0.5 text-[13px] text-[var(--muted)] text-center min-h-[2.5rem]">{ !selected? "escoge tu dificultad" : t(`description.${ selected }`)}</p>
             </div>
             
-         <button className={` cursor-pointer mt-4 w-full py-2 rounded-md font-semibold transition ${ selected?  "bg-[var(--accent)] text-white hover:opacity-90}" : "bg-[var(--border)] text-[var(--muted)] cursor-not-allowed"} `} onClick={ handleModal }>{ t( "startGame" ) }</button>
+            <button className={` cursor-pointer mt-4 w-full py-2 rounded-md font-semibold transition ${ selected?  "bg-[var(--accent)] text-white hover:opacity-90}" : "bg-[var(--border)] text-[var(--muted)] cursor-not-allowed"} `} onClick={ handleModal }>{ t( "startGame" ) }</button>
             
         </>
         
