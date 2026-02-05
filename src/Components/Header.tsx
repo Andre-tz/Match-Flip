@@ -20,7 +20,7 @@ const Header = ( )  =>{
     )}
 
     return (
-        <header className="w-full h-12 px-4 flex justify-between items-center bg-[var(--card)] text-[var(--text)] border-b border-[var(--border)] transition-colors duration-300" >
+        <header className="w-full px-4 flex justify-between items-center bg-[var(--card)] text-[var(--text)] border-b border-[var(--border)] transition-colors duration-300" >
             <h1 className="flex items-center gap-1 text-base font-semibold">{"<"}<AiFillThunderbolt  className=" text-[var(--accent)]"/>{">"} ItsAndreDev</h1>
             <IoLanguageSharp className="text-lg cursor-pointer text-[var(--muted)] hover:text-[var(--accent)] transition-colors"  onClick={ handleLanguage }/>
         </header>

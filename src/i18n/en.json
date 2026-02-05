@@ -10,10 +10,10 @@
     },
     
     "description":{
-        "easy": "Nice and chill. Just a few cards, no rush, no stress. Ideal if your brain's still warming up or if coffee hasn’t kicked in yet ☕😉",
-        "medium": "Alright, now we’re talking. More cards, a bit less time. Not too easy, not too hard—just the right spice. Your focus’s gonna sweat a little 🔥🧠",
-        "hard": "No mercy mode. Tons of cards, ticking clock, and zero forgiveness. Perfect if you're feeling brave... or slightly chaotic today 😈⏱️",
-        "godMode": "Welcome, legend. This isn't just a game—it's war. Max cards, brutal speed, zero mercy. Even your neurons are sweating. Good luck… you’ll need it 😤⚡🧠"
+        "easy": "Nice and chill. Few cards, no rush, no stress. Perfect to warm up… or wait for the coffee to kick in ☕😉",
+        "medium": "Now it gets interesting. More cards, less time. Not easy, not hard—just the right spice 🔥🧠",
+        "hard": "No mercy. Tons of cards, ticking clock, zero forgiveness. Enter if you dare 😈⏱️",
+        "godMode": "Legend only. Max cards, brutal speed, zero mercy. Good luck… you’ll need it 😤⚡🧠"
     },
 
     "nameModal": {

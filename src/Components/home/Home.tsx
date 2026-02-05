@@ -39,7 +39,7 @@ const Home = ( ) =>{
             { modalActive && <NameModal />}
 
             <h1 className="text-3xl font-bold tracking-tight text-[var(--text)]">MatchFlip</h1>
-            <h2 className="text-base text-[var(--muted)]">{ t( "subtitle" ) }</h2>
+            <h2 className="h-10 text-base text-[var(--muted)]">{ t( "subtitle" ) }</h2>
             <div className="w-full max-w-[400px] mt-4 bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)">
                 <DifficultyPanel />  
             </div>

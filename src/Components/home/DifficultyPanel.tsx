@@ -70,7 +70,7 @@ const DifficultyPanel = () => {
                     })}
                 </div>
 
-                <p className=" px-0.5 text-[13px] text-[var(--muted)] text-center min-h-[2.5rem]">{ !selected? "escoge tu dificultad" : t(`description.${ selected }`)}</p>
+                <p className="h-[60px] flex flex-col justify-center px-1 text-[13px] text-[var(--muted)] text-center min-h-[2.5rem]">{ !selected? "escoge tu dificultad" : t(`description.${ selected }`)}</p>
             </div>
             
             <button className={` cursor-pointer mt-4 w-full py-2 rounded-md font-semibold transition ${ selected?  "bg-[var(--accent)] text-white hover:opacity-90}" : "bg-[var(--border)] text-[var(--muted)] cursor-not-allowed"} `} onClick={ handleModal }>{ t( "startGame" ) }</button>
