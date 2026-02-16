@@ -13,4 +13,12 @@ describe( "Obteniendo imagenes aleatorias", ()=>{
         expect( result ).toEqual([])
     })
 
+    it( "El nuevo array debe el mismo elemento repetido 2 veces", ()=>{
+        const result = getRandomImages( array, 5 )
+        const counts = result.reduce<Record<string, number>>( ( acc, item ) =>{
+            acc[ item ] = ( acc[ item ] || 0 ) + 1
+            return acc
+        }, {})
+        Object.values( counts ).forEach( ( n ) => expect( n ).toBe( 2 ))
+    })
 })
