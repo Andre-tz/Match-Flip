@@ -2,7 +2,6 @@
 import { useNavigate} from "react-router-dom";
 import useGame from "../../../hook/useGame";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 //clases para botones
 const baseBtn= "w-full py-2 rounded-md text-sm font-medium transition active:scale-95"
@@ -25,7 +24,6 @@ const ButtonNavigation = ( { onReset } : { onReset : ()=>void } ) => {
     const handleSurrender = ( )=>{
         setUserData( prev => ( { ...prev, gameStatus: "lost" } ) )
     }
-    useEffect( ()=>{ console.log(userData.gameStatus)}, [ userData.gameStatus] )
     //funcion para renderizar los botones de acuerdo al estado del juego
     const renderButtons = () => {
         switch (userData.gameStatus) {
